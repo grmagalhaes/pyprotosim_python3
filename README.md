@@ -1,7 +1,7 @@
 Pré-Introdução em pt_br
 -----------------------------
-Este projeto é uma conversão para Python 3.7 dos protocolos RADIUS e 
-DIMENSION do projeto original "pyprotosim".
+Este projeto é uma conversão para Python 3.7 dos protocolos DIAMETER e 
+DIAMETER do projeto original "pyprotosim".
  
 Não atuei nos outros, tais como SMPP pois tenho uma soluções já funcionais
 - Tais protocolos são utilizados na área de TELECOM
@@ -9,7 +9,7 @@ Não atuei nos outros, tais como SMPP pois tenho uma soluções já funcionais
 Python Protocol Simulator
 -----------------------------
 
-Protocols Dimension and Radius converted to Python 3.7 by 
+Protocols DIAMETER and RADIUS converted to Python 3.7 by 
 Gerson Rodrigues <gerson.rodrigues@n3r.com.br> in July 2019
 
 Copyright (c) 2012, Sergej Srepfler <sergej.srepfler@gmail.com>
