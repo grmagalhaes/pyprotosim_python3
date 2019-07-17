@@ -1,16 +1,5 @@
-Pré-Introdução em pt_br
------------------------------
-Este projeto é uma conversão para Python 3.7 dos protocolos RADIUS e 
-DIMENSION do projeto original "pyprotosim".
- 
-Não atuei nos outros, tais como SMPP pois tenho uma soluções já funcionais
-- Tais protocolos são utilizados na área de TELECOM
-
 Python Protocol Simulator
 -----------------------------
-
-Protocols Dimension and Radius converted to Python 3.7 by 
-Gerson Rodrigues <gerson.rodrigues@n3r.com.br in July 2019
 
 Copyright (c) 2012, Sergej Srepfler <sergej.srepfler@gmail.com>
 EAP calculations use parts of hostapd code (http://w1.fi/hostapd)
@@ -128,7 +117,7 @@ RFC 2132 - DHCP Options and BOOTP Vendor Extensions
 For full list check at http://www.zytrax.com/books/dhcp/apc/
 RFC 4510 - Lightweight Directory Access Protocol
 For full list check at http://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol#RFCs
-SMPP Developer’s Forum, SMPP Protocol Specification v3.4, 10/12/1999
+SMPP Developer�s Forum, SMPP Protocol Specification v3.4, 10/12/1999
 and probably some others I forgot to mention while researching some issue
 
 Developer's note
@@ -205,3 +194,4 @@ DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
 THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
