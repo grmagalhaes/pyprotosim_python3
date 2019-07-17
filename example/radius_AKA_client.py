@@ -227,19 +227,19 @@ if __name__ == "__main__":
     ###########################################################
     # Process Challenge
     # split header and AVPs
-    EAPChallenge=HDRItem()
-    stripHdr(EAPChallenge,received.encode("hex"))
-    RID=EAPChallenge.Identifier+1
+    EAPChallenge = HDRItem()
+    stripHdr(EAPChallenge, codecs.encode(received, 'hex'))
+    RID = EAPChallenge.Identifier + 1
     # If you do not want to process full msg, you can stop here without any harm
     # We need Payload from EAP-Challenge
-    Challenge_avps=splitMsgAVPs(EAPChallenge.msg)
+    Challenge_avps = splitMsgAVPs(EAPChallenge.msg)
     # Display response for better undestanding
     dump_Payload(Challenge_avps)
-    Challenge_Payload=findAVP("EAP-Message",Challenge_avps)
+    Challenge_Payload = findAVP("EAP-Message",Challenge_avps)
     if Challenge_Payload != ERROR:
         # We need AT_RAND to create response
-        E=eap.decode_EAP(Challenge_Payload.encode('hex'))
-        RAND=findAVP("AT_RAND", E.avps)
+        E = eap.decode_EAP(Challenge_Payload.encode('hex'))
+        RAND = findAVP("AT_RAND", E.avps)
         if RAND == ERROR:
             bailOut("no RAND received")
     else:
@@ -247,14 +247,14 @@ if __name__ == "__main__":
     ###########################################################
     msg=create_Challenge_Response(RID,E.id,RAND,ETYPE)
     # msg now contains EAP Response as hex string
-    logging.debug("+"*30)
+    logging.debug("+" * 30)
     # send data
-    Conn.sendto(msg.decode("hex"),(HOST,PORT))
+    Conn.sendto(codecs.decode(msg, 'hex'),(HOST,PORT))
     # Receive response
     received = Conn.recv(MSG_SIZE)
     # split header and AVPs
-    EAPOK=HDRItem()
-    stripHdr(EAPOK, received.encode("hex"))
+    EAPOK = HDRItem()
+    stripHdr(EAPOK, codecs.encode(received, 'hex'))
     # No decoding is needed.
     # Normally - this is the end.
     ###########################################################
