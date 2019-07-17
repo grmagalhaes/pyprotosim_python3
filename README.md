@@ -5,6 +5,8 @@ DIAMETER do projeto original "pyprotosim".
  
 Não atuei nos outros, tais como SMPP pois tenho uma soluções já funcionais
 - Tais protocolos são utilizados na área de TELECOM
+- dimension_client.py : cliente de teste do protocolo DIMENSION
+- dimension_server.py : servidor socket genérico (não responde DIMENSION ainda)
 
 Python Protocol Simulator
 -----------------------------
