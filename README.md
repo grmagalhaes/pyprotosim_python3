@@ -10,7 +10,7 @@ Python Protocol Simulator
 -----------------------------
 
 Protocols Dimension and Radius converted to Python 3.7 by 
-Gerson Rodrigues <gerson.rodrigues@n3r.com.br in July 2019
+Gerson Rodrigues <gerson.rodrigues@n3r.com.br> in July 2019
 
 Copyright (c) 2012, Sergej Srepfler <sergej.srepfler@gmail.com>
 EAP calculations use parts of hostapd code (http://w1.fi/hostapd)

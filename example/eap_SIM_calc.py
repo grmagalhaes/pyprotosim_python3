@@ -11,6 +11,7 @@
 
 #Next two lines are to include parent directory for testing
 import sys
+import codecs
 sys.path.append("..")
 # Remove them normally
 
@@ -43,12 +44,12 @@ if __name__ == "__main__":
     # Note: If COMP128-1 is used for a3a8, you can use included function to calculate keys
     # K  - Subscriber Secret Key: from network provider (written in SIM card)
     #================================================
-    Identity="1385913234960000"
-    K="77777777777777777777777777777777"
-    NONCE_MT="3333333333333333ffffffffffffffff"
+    Identity = "1385913234960000"
+    K = "77777777777777777777777777777777"
+    NONCE_MT = "3333333333333333ffffffffffffffff"
     IV = "053cdf774f7067508504358f0f6756da"
-    VERSION_LIST="0001"
-    SELECTED_VER="1"
+    VERSION_LIST = "0001"
+    SELECTED_VER = "1"
     ENCR_DATA = "ba7781b70f414e1ebcca9caf68d049a20be84dff9602b81e0b71a4df9b41b57a843616b36348fedc49be1d7304c176d1c5e0b2b69f0985d788aad0fcc2e147daaff7e9ce5d0989367fb2ac0d091ad6eb34ecd3759c9a84571174477fe4bd468281d0f5981d42f2a48381f7885ea30dca"
     #=============================
     # Procedure

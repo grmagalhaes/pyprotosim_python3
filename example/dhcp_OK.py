@@ -6,7 +6,7 @@
 # This software is distributed under the terms of BSD license.    
 ##################################################################
 
-import sys
+# import sys
 import socket
 # import IN     # apenas linux
 
@@ -25,10 +25,10 @@ if __name__ == "__main__":
     # socket is in blocking mode, so let's add a timeout
     Conn.settimeout(3)
     # Bind to Device
-    Conn.setsockopt(socket.SOL_SOCKET,25, LISTEN_DEV+'\0')
+    Conn.setsockopt(socket.SOL_SOCKET, 25, LISTEN_DEV + '\0')
     # Enable ReuseAddr & Broadcast
-    Conn.setsockopt(socket.SOL_SOCKET,socket.SO_REUSEADDR,1)
-    Conn.setsockopt(socket.SOL_SOCKET,socket.SO_BROADCAST,1)
+    Conn.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR,1)
+    Conn.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST,1)
     # Bind to Address
     Conn.bind(('', LOCAL_PORT))
     ##########################################################  

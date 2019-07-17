@@ -15,8 +15,7 @@ sys.path.append("..")
 
 from libRadius import *
 import eap
-# import datetime
-# import time
+import codecs
 
 def prepareKeysFromTriplets(a1,a2,a3):
     #a=Authentication-Information-SIM
@@ -180,7 +179,7 @@ if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
     LoadDictionary("../dictRadius.xml")
     eap.LoadEAPDictionary("../dictEAP.xml")
-    HOST="10.14.5.148"
+    HOST="127.0.0.1"
     PORT=1812
     IDENTITY="121111234561000"
     SELECTED_VER="0001"
@@ -208,18 +207,18 @@ if __name__ == "__main__":
     # Receive response
     received = Conn.recv(MSG_SIZE)
     # Process response
-    EAPAnyId=HDRItem()
-    stripHdr(EAPAnyId,received.encode("hex"))
-    RID=EAPAnyId.Identifier+1    
-    if EAPAnyId.Code==3:
+    EAPAnyId = HDRItem()
+    stripHdr(EAPAnyId, received.encode("hex"))
+    RID = EAPAnyId.Identifier+1
+    if EAPAnyId.Code == 3:
         bailOut("Access/Reject")
-    Identity_avps=splitMsgAVPs(EAPAnyId.msg)
-    STATE=findAVP("State",Identity_avps)
+    Identity_avps = splitMsgAVPs(EAPAnyId.msg)
+    STATE=findAVP("State", Identity_avps)
     # Display response for better undestanding
-    Identity_Payload=findAVP("EAP-Message",Identity_avps)
+    Identity_Payload = findAVP("EAP-Message",Identity_avps)
     dump_Payload(Identity_avps)    
     E=eap.decode_EAP(Identity_Payload.encode('hex'))
-    VERSION_LIST=findAVP("AT_VERSION_LIST",E.avps)
+    VERSION_LIST = findAVP("AT_VERSION_LIST",E.avps)
     print("-------------------------------------------")
     print("at_version_list=", VERSION_LIST)
     print("-------------------------------------------")
@@ -261,7 +260,7 @@ if __name__ == "__main__":
     received = Conn.recv(MSG_SIZE)
     # split header and AVPs
     EAPOK = HDRItem()
-    stripHdr(EAPOK, codecs.encode(received, encoding="hex")
+    stripHdr(EAPOK, codecs.encode(received, 'hex'))
     # No decoding is needed.
     # Normally - this is the end.
     ###########################################################

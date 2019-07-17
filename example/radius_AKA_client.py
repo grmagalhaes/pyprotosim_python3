@@ -22,9 +22,9 @@ def prepareKeysFromTriplets(a1,a2,a3):
     #a=Authentication-Information-SIM
     #Treat as String, not hex
     #47fccae1253d85d2+fb86d937+cbfe6115271cc21db2d3e000
-    rand=a1[0:16]+a2[0:16]+a3[0:16]
-    kc=a1[32:48]+a2[32:48]+a3[32:48]
-    return rand,kc
+    rand = a1[0:16]+a2[0:16]+a3[0:16]
+    kc = a1[32:48]+a2[32:48]+a3[32:48]
+    return rand, kc
 
 def Payload_Identity():
     # Let's build EAP-Payload Identity AVP
