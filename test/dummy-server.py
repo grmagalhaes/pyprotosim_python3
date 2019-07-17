@@ -61,7 +61,7 @@ if __name__ == "__main__":
     
     # Define server_host:port to use (empty string means localhost)
     HOST = "127.0.0.1"
-    PORT = 3868
+    PORT = 3869
     
     # Create the server, binding to HOST:PORT
     server = socketserver.TCPServer((HOST, PORT), MyTCPHandler)

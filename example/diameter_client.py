@@ -37,7 +37,7 @@ def create_CER():
     # Set Hop-by-Hop and End-to-End
     initializeHops(CER)
     # Add AVPs to header and calculate remaining fields
-    msg = createReq(CER,CER_avps)
+    msg = createReq(CER, CER_avps)
     # msg now contains CER Request as hex string
     return msg
 
@@ -258,7 +258,7 @@ if __name__ == "__main__":
     LoadDictionary("../dictDiameter.xml")
     eap.LoadEAPDictionary("../dictEAP.xml")
     HOST = "127.0.0.1"
-    PORT = 3868
+    PORT = 3869
     ORIGIN_HOST = "localhost"
     ORIGIN_REALM = "localhost"
     now = datetime.datetime.now()
